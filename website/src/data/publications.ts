@@ -41,7 +41,7 @@ export const publicationDomainMeta: Record<
   "clinical-ai-biosignals": {
     title: "Clinical AI & biomedical signal validation",
     intro:
-      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance at Sensome (PAD clot characterisation, lung biopsy tissue classification) and EEG-led psychiatric treatment-response prediction at Sama Therapeutics.",
+      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance for peripheral arterial disease (PAD) and lung biopsy at Sensome, plus electroencephalography (EEG)-led psychiatric treatment-response work at Sama Therapeutics. Sensome study codes (SEPARATE, E-SEPARATE, INSPECT) are internal names; section headings describe the clinical question first.",
   },
   "cognitive-neuroscience-language": {
     title: "Cognitive neuroscience & language processing",
@@ -86,6 +86,8 @@ export type Publication = {
   venue: string;
   role: string;
   summary: string;
+  /** Clinical / regulatory audience: phase and setting (sourced from abstracts) */
+  studyPhase?: string;
   featured?: boolean;
   status?: "abstract";
   type?: PublicationType;
@@ -103,24 +105,27 @@ export const publicationGroupMeta: Record<
   { title: string; tocLabel: string; intro: string }
 > = {
   "pad-clot": {
-    tocLabel: "PAD: SEPARATE & E-SEPARATE",
-    title: "Peripheral arterial disease (PAD): clot characterisation",
+    tocLabel:
+      "Clot characterisation in peripheral arterial disease (SEPARATE / E-SEPARATE)",
+    title:
+      "Clot characterisation in peripheral arterial disease (SEPARATE / E-SEPARATE studies)",
     intro:
-      "Sensome / Clotild® smart guidewire. SEPARATE (in-vivo) and E-SEPARATE (ex-vivo) studies use bioimpedance to identify red blood cell (RBC)-rich clot tissue in peripheral arterial disease (PAD).",
+      "Peripheral arterial disease (PAD) clot characterisation with the Clotild® smart guidewire (Sensome). Bioimpedance targets red blood cell (RBC)-rich clot tissue. SEPARATE is the in-vivo clinical study; E-SEPARATE is the ex-vivo preclinical validation against histology.",
   },
   "lung-inspect": {
-    tocLabel: "Lung biopsy: INSPECT",
+    tocLabel:
+      "Lung tissue classification during bronchoscopic biopsy (INSPECT)",
     title:
-      "Lung cancer: tissue characterisation during bronchoscopic biopsy (INSPECT)",
+      "Lung tissue classification during bronchoscopic biopsy (INSPECT study)",
     intro:
-      "INSPECT is Sensome's first-in-human study of bioimpedance on a bronchoscopy stylet for tool-in-lesion confirmation during lung biopsy (central and peripheral lesions).",
+      "Tool-in-lesion confirmation during bronchoscopic lung biopsy (central and peripheral lesions). The INSPECT study (Sensome) is a first-in-human evaluation of bioimpedance on a bronchoscopy stylet.",
   },
   "psychiatric-biomarkers": {
-    tocLabel: "Psychiatric treatment-response (Sama)",
+    tocLabel: "Psychiatric treatment-response from EEG biomarkers (Sama)",
     title:
-      "Psychiatric treatment-response prediction (Sama Therapeutics)",
+      "Psychiatric treatment-response prediction from EEG biomarkers (Sama Therapeutics)",
     intro:
-      "Transprognostic multimodal model for major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD). Christos led the electroencephalography (EEG) pipeline.",
+      "Transprognostic multimodal model across major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD), with Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) Type 4 external validation. Christos led the electroencephalography (EEG) pipeline.",
   },
   "neuroimaging-sentence": {
     tocLabel: "Cortex: M/EEG vs LSTM",
@@ -162,18 +167,21 @@ export const publications: Publication[] = [
   {
     year: 2025,
     title:
-      "In-vivo impedance identification of RBC-rich clot in peripheral arterial disease (SEPARATE)",
+      "In-vivo identification of RBC-rich clot in peripheral arterial disease (SEPARATE study)",
     venue: "JET OPEN the world 2025, Osaka",
     role: "First author",
+    studyPhase: "Clinical · in-vivo",
     summary:
-      "In-vivo clinical validation (n = 17); 100% primary endpoint success for lesion impedance data. RBC-rich clot identification in peripheral arterial disease (PAD).",
+      "In-vivo clinical validation (n = 17); 100% primary endpoint success for lesion impedance data. Red blood cell (RBC)-rich clot identification in peripheral arterial disease (PAD).",
     featured: true,
     type: "Clinical abstract",
-    alsoPresentedAt: ["Paris Vascular Insights (PVI) 2024, Paris"],
+    alsoPresentedAt: [
+      "Paris Vascular Insights (PVI) 2024, Paris",
+    ],
     group: "pad-clot",
     links: [
       {
-        label: "Coverage (Vascular News)",
+        label: "About the SEPARATE and E-SEPARATE studies (Vascular News)",
         href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
       },
       { label: "Sensome", href: "https://www.sensome.com/" },
@@ -182,18 +190,21 @@ export const publications: Publication[] = [
   {
     year: 2025,
     title:
-      "Ex-vivo machine learning impedance analysis for thrombus in PAD (E-SEPARATE)",
+      "Ex-vivo thrombus analysis in PAD versus histology (E-SEPARATE study)",
     venue: "JET OPEN the world 2025, Osaka",
     role: "First author",
+    studyPhase: "Preclinical · ex-vivo",
     summary:
-      "Ex-vivo ML versus histology gold standard (n = 15); coefficient of determination R² = 0.79 in peripheral arterial disease (PAD).",
+      "Ex-vivo machine learning (ML) versus histology gold standard (n = 15); coefficient of determination R² = 0.79 in peripheral arterial disease (PAD).",
     featured: true,
     type: "Clinical abstract",
-    alsoPresentedAt: ["Paris Vascular Insights (PVI) 2024, Paris"],
+    alsoPresentedAt: [
+      "Paris Vascular Insights (PVI) 2024, Paris",
+    ],
     group: "pad-clot",
     links: [
       {
-        label: "Coverage (Vascular News)",
+        label: "About the SEPARATE and E-SEPARATE studies (Vascular News)",
         href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
       },
       { label: "Sensome", href: "https://www.sensome.com/" },
@@ -202,9 +213,10 @@ export const publications: Publication[] = [
   {
     year: 2026,
     title:
-      "In situ lung tissue characterization using bioimpedance (INSPECT first-in-human study)",
+      "In situ lung tissue characterisation during bronchoscopic biopsy (INSPECT study)",
     venue: "American Thoracic Society (ATS) 2026 International Conference",
     role: "Third author · ML analysis lead",
+    studyPhase: "Clinical · first-in-human",
     summary:
       "Machine learning (ML) tissue classification during bronchoscopic lung biopsy; 26 patients across Australia and France.",
     featured: true,
@@ -214,7 +226,7 @@ export const publications: Publication[] = [
     links: [
       { label: "Sensome", href: "https://www.sensome.com/" },
       {
-        label: "Study press release",
+        label: "About the INSPECT study (press release)",
         href: "https://www.sensome.com/docs/news/SENSOME_PR_INSPECT_250527_EN.pdf",
       },
     ],
@@ -222,11 +234,12 @@ export const publications: Publication[] = [
   {
     year: 2022,
     title:
-      "A Transprognostic Multimodal Algorithm Predicts MDD, ADHD, OCD, and PTSD Treatment Response",
+      "Transprognostic treatment-response prediction across depression, ADHD, OCD, and PTSD",
     venue: "6th Neuropsychiatric Drug Development Summit, Boston",
     role: "Third author · EEG pipeline lead",
+    studyPhase: "Clinical · TRIPOD Type 4 validation",
     summary:
-      "Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) Type 4 external validation; ranked first in the TDBRAIN international competition.",
+      "Multimodal model for major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD); ranked first in the TDBRAIN international competition.",
     type: "Conference poster",
     group: "psychiatric-biomarkers",
     links: [

@@ -71,6 +71,7 @@ const statusLabel =
   <div class="pub-meta">
     <p class="pub-venue">{pub.venue}</p>
     <p class="pub-year">{pub.year}</p>
+    {pub.studyPhase && <p class="pub-phase">{pub.studyPhase}</p>}
     {statusLabel && <p class="pub-status">{statusLabel}</p>}
     <p class="pub-role">{pub.role}</p>
   </div>

@@ -491,10 +491,18 @@ main {
   color: var(--text-secondary);
 }
 
+.pub-phase,
 .pub-status {
   margin: 0.35rem 0 0;
   font-family: var(--font-mono);
   font-size: 0.75rem;
+}
+
+.pub-phase {
+  color: var(--text-secondary);
+}
+
+.pub-status {
   color: var(--accent);
 }
 
