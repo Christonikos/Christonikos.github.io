@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# Build the site and push dist/ to GitHub Pages (user site: username.github.io repo).
+# Build and publish to GitHub Pages via the gh-pages branch (not GitHub Actions).
+#
+# Repo Settings → Pages → Build and deployment:
+#   Source: Deploy from a branch
+#   Branch: gh-pages / (root)
+#
 # Usage:
-#   GITHUB_PAGES_REPO=git@github.com:Christonikos/Christonikos.github.io.git ./scripts/deploy-github-pages.sh
+#   ./scripts/deploy-github-pages.sh
+#   GITHUB_PAGES_REPO=git@github.com:YOU/Christonikos.github.io.git ./scripts/deploy-github-pages.sh
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-REPO="${GITHUB_PAGES_REPO:-}"
-
-if [[ -z "$REPO" ]]; then
-  echo "Set GITHUB_PAGES_REPO, e.g.:" >&2
-  echo "  export GITHUB_PAGES_REPO=git@github.com:Christonikos/Christonikos.github.io.git" >&2
-  exit 1
-fi
+REPO="${GITHUB_PAGES_REPO:-git@github.com:Christonikos/Christonikos.github.io.git}"
 
 cd "$ROOT"
 npm run build
@@ -29,5 +29,4 @@ git -C "$WORK" commit -q -m "Deploy site $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "Pushing to $REPO (branch gh-pages)…"
 git -C "$WORK" push -f "$REPO" gh-pages:gh-pages
 
-echo "Done. Enable GitHub Pages → Deploy from branch gh-pages / (root)."
-echo "User site URL: https://christonikos.github.io/ (after DNS/propagation)"
+echo "Published. Live after Pages propagates: https://christonikos.github.io/"

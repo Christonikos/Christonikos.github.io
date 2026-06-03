@@ -19,10 +19,27 @@ npm run build
 
 Output: `dist/`
 
-## CV PDF
+## CV
 
-Place the latest CV at `public/christos-zacharopoulos-cv.pdf` for the download link on the homepage.
+Place the latest CV at the **project root** (`../christos-zacharopoulos-cv.pdf` or `.docx`), then:
 
-## Deploy
+```bash
+../website/scripts/sync-cv-from-root.sh
+```
 
-GitHub Actions deploys to GitHub Pages on push to `main` when `website/**` changes. Set `site` in `astro.config.mjs` when attaching a custom domain.
+Update `links.cv` in `src/data/site.ts` if you switch between PDF and DOCX.
+
+## Deploy (GitHub Pages)
+
+**Always deploy from the `gh-pages` branch** — not GitHub Actions.
+
+1. **One-time (GitHub repo):** Settings → Pages → Build and deployment → **Deploy from a branch** → `gh-pages` / `/(root)`.
+2. **After each site change:**
+
+```bash
+npm run deploy
+```
+
+This builds `dist/`, force-pushes to `gh-pages`, and updates https://christonikos.github.io/ within a minute or two.
+
+Set `site` in `astro.config.mjs` when attaching a custom domain.
