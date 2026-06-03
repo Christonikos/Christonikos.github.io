@@ -1,0 +1,29 @@
+---
+import { publicationDomains } from "../data/publications";
+---
+
+<nav class="pub-toc" aria-label="Contents">
+  <p class="pub-toc-heading">Contents</p>
+  <ol class="pub-toc-domains">
+    {
+      publicationDomains.map((domain) => (
+        <li class="pub-toc-domain">
+          <a class="pub-toc-domain-link" href={`#domain-${domain.id}`}>
+            {domain.title}
+          </a>
+          {
+            domain.groups.length > 0 && (
+              <ol class="pub-toc-groups">
+                {domain.groups.map((group) => (
+                  <li>
+                    <a href={`#group-${group.id}`}>{group.tocLabel}</a>
+                  </li>
+                ))}
+              </ol>
+            )
+          }
+        </li>
+      ))
+    }
+  </ol>
+</nav>

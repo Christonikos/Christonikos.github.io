@@ -1,0 +1,17 @@
+.DS_Store
+.obsidian/
+
+# Website
+website/node_modules/
+website/dist/
+website/.astro/
+website/feedback-pdf/
+
+# Python / research tooling
+research/.venv/
+__pycache__/
+*.pyc
+
+# Local env
+.env
+.env.*

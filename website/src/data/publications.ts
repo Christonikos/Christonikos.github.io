@@ -1,0 +1,462 @@
+/** Publications - wiki/publications.md, raw/industrial_cv_25/misc.tex, employment.tex */
+
+export type PublicationType =
+  | "Peer-reviewed journal"
+  | "Conference paper"
+  | "Clinical abstract"
+  | "Conference poster";
+
+export type PublicationDomainId =
+  | "bioimpedance"
+  | "psychiatric-biomarkers"
+  | "psychometrics-psychology"
+  | "neuroimaging-nlp";
+
+export type PublicationGroupId =
+  | "pad-clot"
+  | "lung-inspect"
+  | "psychiatric-biomarkers"
+  | "neuroimaging-sentence"
+  | "psycholinguistics"
+  | "llm-evaluation"
+  | "hellenic-affective";
+
+export const publicationGroupDomain: Record<
+  PublicationGroupId,
+  PublicationDomainId
+> = {
+  "pad-clot": "bioimpedance",
+  "lung-inspect": "bioimpedance",
+  "psychiatric-biomarkers": "psychiatric-biomarkers",
+  "neuroimaging-sentence": "neuroimaging-nlp",
+  psycholinguistics: "neuroimaging-nlp",
+  "llm-evaluation": "neuroimaging-nlp",
+  "hellenic-affective": "psychometrics-psychology",
+};
+
+export const publicationDomainMeta: Record<
+  PublicationDomainId,
+  { title: string; intro: string }
+> = {
+  bioimpedance: {
+    title: "Bioimpedance",
+    intro:
+      "Intravascular bioimpedance machine learning (ML) at Sensome: peripheral arterial disease (PAD) clot characterisation and lung biopsy tissue classification.",
+  },
+  "psychiatric-biomarkers": {
+    title: "Psychiatric biomarkers",
+    intro:
+      "Electroencephalography (EEG)-led multimodal biomarkers for psychiatric treatment-response prediction at Sama Therapeutics.",
+  },
+  "psychometrics-psychology": {
+    title: "Psychometrics & psychology",
+    intro:
+      "Affective and psychometric research: normative ratings of emotional language across the adult lifespan (Aristotle University of Thessaloniki).",
+  },
+  "neuroimaging-nlp": {
+    title: "Neuroimaging & language models",
+    intro:
+      "NeuroSpin PhD output in *Cortex* (M/EEG decoding of sentence structure) plus psycholinguistics and large language model (LLM) / natural language processing (NLP) papers.",
+  },
+};
+
+export const publicationDomainOrder: PublicationDomainId[] = [
+  "neuroimaging-nlp",
+  "bioimpedance",
+  "psychiatric-biomarkers",
+  "psychometrics-psychology",
+];
+
+export type PublicationLink = {
+  label: string;
+  href: string;
+};
+
+export type PublicationFigure = {
+  src: string;
+  alt: string;
+  caption: string;
+  width?: number;
+  height?: number;
+};
+
+export type Publication = {
+  year: number;
+  title: string;
+  venue: string;
+  role: string;
+  summary: string;
+  featured?: boolean;
+  status?: "abstract";
+  type?: PublicationType;
+  alsoPresentedAt?: string[];
+  group: PublicationGroupId;
+  links?: PublicationLink[];
+  /** Single figure (legacy) */
+  figure?: PublicationFigure;
+  /** Paper figures from camera-ready sources (preferred when multiple) */
+  figures?: PublicationFigure[];
+};
+
+export const publicationGroupMeta: Record<
+  PublicationGroupId,
+  { title: string; tocLabel: string; intro: string }
+> = {
+  "pad-clot": {
+    tocLabel: "PAD: SEPARATE & E-SEPARATE",
+    title: "Peripheral arterial disease (PAD): clot characterisation",
+    intro:
+      "Sensome / Clotild® smart guidewire. SEPARATE (in-vivo) and E-SEPARATE (ex-vivo) studies use bioimpedance to identify red blood cell (RBC)-rich clot tissue in peripheral arterial disease (PAD).",
+  },
+  "lung-inspect": {
+    tocLabel: "Lung biopsy: INSPECT",
+    title:
+      "Lung cancer: tissue characterisation during bronchoscopic biopsy (INSPECT)",
+    intro:
+      "INSPECT is Sensome's first-in-human study of bioimpedance on a bronchoscopy stylet for tool-in-lesion confirmation during lung biopsy (central and peripheral lesions).",
+  },
+  "psychiatric-biomarkers": {
+    tocLabel: "Treatment-response prediction (Sama)",
+    title:
+      "Psychiatric biomarkers: treatment-response prediction (Sama Therapeutics)",
+    intro:
+      "Transprognostic multimodal model for major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD). Christos led the electroencephalography (EEG) pipeline.",
+  },
+  "neuroimaging-sentence": {
+    tocLabel: "Cortex: M/EEG vs LSTM",
+    title: "Hierarchical vs sequential sentence processing (*Cortex*)",
+    intro:
+      "PhD work at NeuroSpin / Sorbonne University. In human MEG/EEG, only structural (hierarchical) effects decode above chance; transition and congruity do not. Compared to a two-layer long short-term memory (LSTM) language model that decodes all three.",
+  },
+  psycholinguistics: {
+    tocLabel: "Grammatical agreement (EMNLP 2023)",
+    title: "Psycholinguistics and computational modelling",
+    intro:
+      "Human grammatical agreement versus language models (LMs). First-author EMNLP 2023 paper (Empirical Methods in Natural Language Processing) with Meta AI and NeuroSpin co-authors.",
+  },
+  "llm-evaluation": {
+    tocLabel: "LLM evaluation (IJCNLP, Springer)",
+    title: "Language model evaluation and behaviour",
+    intro:
+      "Large language model (LLM) studies without neuroimaging claims: personality-trait decoding and semantic-violation detection in causal LMs.",
+  },
+  "hellenic-affective": {
+    tocLabel: "Hellenic word norms (SAN2016)",
+    title: "Valence and arousal ratings across the adult lifespan",
+    intro:
+      "Cross-sectional psychometrics at Aristotle University of Thessaloniki (Bamidis lab): self-reported valence and arousal for 120 Hellenic words in young, middle-aged, and older adults.",
+  },
+};
+
+export const publicationGroupOrder: PublicationGroupId[] = [
+  "pad-clot",
+  "lung-inspect",
+  "psychiatric-biomarkers",
+  "hellenic-affective",
+  "neuroimaging-sentence",
+  "psycholinguistics",
+  "llm-evaluation",
+];
+
+export const publications: Publication[] = [
+  {
+    year: 2025,
+    title:
+      "In-vivo impedance identification of RBC-rich clot in peripheral arterial disease (SEPARATE)",
+    venue: "JET OPEN the world 2025, Osaka",
+    role: "First author",
+    summary:
+      "In-vivo clinical validation of impedance-based red blood cell (RBC)-rich clot identification in peripheral arterial disease (PAD).",
+    featured: true,
+    type: "Clinical abstract",
+    alsoPresentedAt: ["Paris Vascular Insights (PVI) 2024, Paris"],
+    group: "pad-clot",
+    links: [
+      {
+        label: "Coverage (Vascular News)",
+        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
+      },
+      { label: "Sensome", href: "https://www.sensome.com/" },
+    ],
+  },
+  {
+    year: 2024,
+    title:
+      "In-vivo impedance identification of RBC-rich clot in PAD (SEPARATE)",
+    venue: "Paris Vascular Insights (PVI) 2024, Paris",
+    role: "First author",
+    summary:
+      "17 patients; 100% primary endpoint success for lesion impedance data in peripheral arterial disease (PAD).",
+    type: "Clinical abstract",
+    group: "pad-clot",
+    links: [
+      {
+        label: "Coverage (Vascular News)",
+        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
+      },
+    ],
+  },
+  {
+    year: 2025,
+    title:
+      "Ex-vivo machine learning impedance analysis for thrombus in PAD (E-SEPARATE)",
+    venue: "JET OPEN the world 2025, Osaka",
+    role: "First author",
+    summary:
+      "Ex-vivo machine learning (ML) versus histology gold standard in peripheral arterial disease (PAD); coefficient of determination R²=0.79.",
+    featured: true,
+    type: "Clinical abstract",
+    alsoPresentedAt: ["Paris Vascular Insights (PVI) 2024, Paris"],
+    group: "pad-clot",
+    links: [
+      {
+        label: "Coverage (Vascular News)",
+        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
+      },
+      { label: "Sensome", href: "https://www.sensome.com/" },
+    ],
+  },
+  {
+    year: 2024,
+    title:
+      "Ex-vivo machine learning impedance analysis for thrombus in PAD (E-SEPARATE)",
+    venue: "Paris Vascular Insights (PVI) 2024, Paris",
+    role: "First author",
+    summary:
+      "15 patients; R²=0.79 versus histology in peripheral arterial disease (PAD).",
+    type: "Clinical abstract",
+    group: "pad-clot",
+    links: [
+      {
+        label: "Coverage (Vascular News)",
+        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
+      },
+    ],
+  },
+  {
+    year: 2026,
+    title:
+      "In situ lung tissue characterization using bioimpedance (INSPECT first-in-human study)",
+    venue: "American Thoracic Society (ATS) 2026 International Conference",
+    role: "Third author · ML analysis lead",
+    summary:
+      "Machine learning (ML) tissue classification during bronchoscopic lung biopsy; 26 patients across Australia and France.",
+    featured: true,
+    status: "abstract",
+    type: "Clinical abstract",
+    group: "lung-inspect",
+    links: [
+      { label: "Sensome", href: "https://www.sensome.com/" },
+      {
+        label: "Study press release",
+        href: "https://www.sensome.com/docs/news/SENSOME_PR_INSPECT_250527_EN.pdf",
+      },
+    ],
+  },
+  {
+    year: 2022,
+    title:
+      "A Transprognostic Multimodal Algorithm Predicts MDD, ADHD, OCD, and PTSD Treatment Response",
+    venue: "6th Neuropsychiatric Drug Development Summit, Boston",
+    role: "Third author · EEG pipeline lead",
+    summary:
+      "Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) Type 4 external validation; ranked first in the TDBRAIN international competition.",
+    type: "Conference poster",
+    group: "psychiatric-biomarkers",
+    links: [
+      {
+        label: "TDBRAIN challenge",
+        href: "https://brainclinics.com/tdbrain-challenge/",
+      },
+    ],
+  },
+  {
+    year: 2026,
+    title:
+      "Disentangling Hierarchical and Sequential Computations during Sentence Processing",
+    venue: "Cortex (Elsevier)",
+    role: "First author · corresponding author",
+    summary:
+      "n=22; MEG and EEG during sentence reading. Main result: only the structural effect is decodable in humans; transition and congruity stay at chance. The LSTM model decodes structural, transition, and congruity effects.",
+    featured: true,
+    type: "Peer-reviewed journal",
+    group: "neuroimaging-sentence",
+    figure: {
+      src: "/publications/cortex-meg-vs-lstm-decoding.png",
+      alt: "Decoding plots comparing human MEG data and an LSTM language model for grammatical number and animacy during sentence reading",
+      caption:
+        "Human MEG/EEG (left): structural effect only (transition and congruity at chance). LSTM model (right): all three effects decodable. Zacharopoulos, Dehaene, Lakretz, Cortex 2026.",
+    },
+    links: [
+      {
+        label: "Journal (ScienceDirect)",
+        href: "https://www.sciencedirect.com/science/article/abs/pii/S0010945226000456",
+      },
+      {
+        label: "Preprint (bioRxiv)",
+        href: "https://www.biorxiv.org/content/10.1101/2022.07.08.499161v3",
+      },
+    ],
+  },
+  {
+    year: 2023,
+    title:
+      "Assessing the influence of attractor-verb distance on grammatical agreement in humans and language models",
+    venue: "EMNLP 2023 (Empirical Methods in Natural Language Processing)",
+    role: "First author",
+    summary:
+      "RSVP agreement task (n=34): humans and NLMs err more with proximal attractors; linear RT effect of distance; GPT-Neo-1.3B and grammar-corrected T5 compared to humans.",
+    featured: true,
+    type: "Conference paper",
+    group: "psycholinguistics",
+    figure: {
+      src: "/publications/emnlp-interference-results.png",
+      alt: "Error rate and response time for humans, GPT-3, and T5 across baseline, distal, and proximal attractor conditions",
+      caption:
+        "Human and NLM error rate and response time by attractor distance and grammaticality (from paper; fig. 2).",
+      width: 732,
+      height: 746,
+    },
+    links: [
+      {
+        label: "Paper (ACL Anthology)",
+        href: "https://aclanthology.org/2023.emnlp-main.998/",
+      },
+      { label: "Preprint (arXiv)", href: "https://arxiv.org/abs/2311.16978" },
+      {
+        label: "Data & analyses (OSF)",
+        href: "https://osf.io/d4g6k",
+      },
+    ],
+  },
+  {
+    year: 2025,
+    title:
+      "Decoding Emergent Big Five Traits in Large Language Models: Temperature-Dependent Expression and Architectural Clustering",
+    venue: "IJCNLP 2025 (International Joint Conference on Natural Language Processing)",
+    role: "First author · corresponding author",
+    summary:
+      "Six LLMs, BFI-2, temperature 0–2: four traits differ across models; Neuroticism and Extraversion track temperature (R² = 0.35 / 0.25).",
+    type: "Conference paper",
+    group: "llm-evaluation",
+    figure: {
+      src: "/publications/ijcnlp-personality-temperature-effects.png",
+      alt: "Effects of sampling temperature on Big Five personality trait scores across six large language models",
+      caption:
+        "Temperature effects on trait expression (from paper). Neuroticism and Extraversion are most sensitive to sampling temperature.",
+      width: 5970,
+      height: 1275,
+    },
+    links: [
+      {
+        label: "Paper (ACL Anthology)",
+        href: "https://aclanthology.org/2025.findings-ijcnlp.104/",
+      },
+      { label: "Preprint (arXiv)", href: "https://arxiv.org/abs/2511.18232" },
+      {
+        label: "Data & code (OSF)",
+        href: "https://osf.io/bsvzc/?view_only=6672219bede24b4e875097426dc3fac1",
+      },
+    ],
+  },
+  {
+    year: 2025,
+    title:
+      "In Machina N400: Pinpointing Where a Causal Language Model Detects Semantic Violations",
+    venue: "Springer CCIS / AICS 2025",
+    role: "First author · corresponding author",
+    summary:
+      "Phi-2, 1520 sentence pairs: per-layer AUC shows semantic violations decoded in layers 18–30 (cluster p < 0.001); early layers at chance; participation ratio expansion then collapse.",
+    type: "Conference paper",
+    group: "llm-evaluation",
+    figures: [
+      {
+        src: "/publications/in-machina-n400-auc-layers.png",
+        alt: "Layer-wise ROC-AUC for decoding plausible versus implausible sentence endings in Phi-2",
+        caption:
+          "Mean ROC-AUC by layer; grey band marks layers 18–30 above chance after cluster permutation (p < 0.001).",
+        width: 1037,
+        height: 773,
+      },
+      {
+        src: "/publications/in-machina-n400-participation-ratio.png",
+        alt: "Participation ratio across Phi-2 layers for violation versus control sentences",
+        caption:
+          "Participation ratio by layer: early expansion for violations, mid-stack convergence, later compression (from paper).",
+        width: 1050,
+        height: 1200,
+      },
+    ],
+    links: [
+      { label: "Preprint (arXiv)", href: "https://arxiv.org/abs/2511.19232" },
+    ],
+  },
+  {
+    year: 2016,
+    title:
+      "Valence, and arousal ratings for Hellenic words by young, middle-aged, and older adults",
+    venue:
+      "SAN2016 Meeting, Corfu · Frontiers in Human Neuroscience (conference abstract)",
+    role: "Third author",
+    summary:
+      "Cross-sectional study (n = 84): older adults rated Hellenic words more positively and with higher arousal than younger groups; age-by-valence interactions across pleasant, neutral, and unpleasant word sets.",
+    type: "Conference abstract",
+    group: "hellenic-affective",
+    links: [
+      {
+        label: "Abstract (Frontiers)",
+        href: "https://www.frontiersin.org/10.3389/conf.fnhum.2016.220.00102/event_abstract",
+      },
+      {
+        label: "DOI",
+        href: "https://doi.org/10.3389/conf.fnhum.2016.220.00102",
+      },
+    ],
+  },
+];
+
+export const featuredPublications = publications.filter((p) => p.featured);
+
+export type PublicationGroup = {
+  id: PublicationGroupId;
+  domain: PublicationDomainId;
+  title: string;
+  tocLabel: string;
+  intro: string;
+  items: Publication[];
+};
+
+export const publicationGroups: PublicationGroup[] = publicationGroupOrder
+  .map((id) => {
+    const items = publications.filter((p) => p.group === id);
+    if (items.length === 0) return null;
+    const meta = publicationGroupMeta[id];
+    return {
+      id,
+      domain: publicationGroupDomain[id],
+      title: meta.title,
+      tocLabel: meta.tocLabel,
+      intro: meta.intro,
+      items,
+    };
+  })
+  .filter((g): g is PublicationGroup => g !== null);
+
+export type PublicationDomain = {
+  id: PublicationDomainId;
+  title: string;
+  intro: string;
+  groups: PublicationGroup[];
+};
+
+export const publicationDomains: PublicationDomain[] =
+  publicationDomainOrder.map((domainId) => {
+    const meta = publicationDomainMeta[domainId];
+    const groups = publicationGroups.filter((g) => g.domain === domainId);
+    return {
+      id: domainId,
+      title: meta.title,
+      intro: meta.intro,
+      groups,
+    };
+  });

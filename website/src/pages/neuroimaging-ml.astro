@@ -1,0 +1,89 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title={`Neuroimaging & Biomedical NLP | ${site.name}`}
+  description="PhD neuroimaging and language-model research: Cortex 2026 MEG/EEG sentence processing, EMNLP 2023 psycholinguistics, and LLM evaluation."
+  path="/neuroimaging-ml/"
+>
+  <header class="page-header">
+    <h1>Neuroimaging and language models</h1>
+    <p>
+      PhD at NeuroSpin under Prof. Stanislas Dehaene. Flagship output: a
+      <em>Cortex</em> paper on hierarchical versus sequential computations during
+      sentence reading (MEG and EEG, compared to an LSTM language model). Separate
+      first-author work on grammatical agreement (EMNLP 2023) and LLM evaluation
+      papers.
+    </p>
+  </header>
+
+  <section class="page-section" aria-labelledby="cortex-heading">
+    <h2 id="cortex-heading"><em>Cortex</em> (2026)</h2>
+    <p>
+      First author on
+      <em>Disentangling Hierarchical and Sequential Computations during Sentence Processing</em>
+      (<em>Cortex</em>, Elsevier), with Stanislas Dehaene and Yair Lakretz.
+      Twenty-two participants read sentences in a rapid serial visual presentation
+      (RSVP) task while we recorded combined magnetoencephalography (MEG) and
+      electroencephalography (EEG) at NeuroSpin and ICM, Paris.
+    </p>
+    <p>
+      We manipulated structural (hierarchical) subject–verb agreement and local
+      transition (sequential) agreement for grammatical number and animacy, and
+      ran the same sentences through a two-layer long short-term memory (LSTM)
+      language model. The main neural result: in human MEG/EEG, only the
+      structural effect is decodable above chance; transition and congruity
+      decoding stay at chance throughout the trial window. The model decodes all
+      three effects.
+    </p>
+    <p class="text-link-row">
+      <a href="/publications/#group-neuroimaging-sentence">Publication entry with figure →</a>
+      ·
+      <a
+        href="https://www.sciencedirect.com/science/article/abs/pii/S0010945226000456"
+        target="_blank"
+        rel="noopener noreferrer"
+      >ScienceDirect</a>
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="phd-heading">
+    <h2 id="phd-heading">PhD, NeuroSpin / Sorbonne University</h2>
+    <p>
+      Supervised by Prof. Stanislas Dehaene (Collège de France). Designed and ran
+      neuroimaging experiments with EEG and MEG; additional intracranial work with
+      collaborators is outside the <em>Cortex</em> paper above.
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="emnlp-heading">
+    <h2 id="emnlp-heading">EMNLP 2023</h2>
+    <p>
+      First author on a paper at EMNLP (Empirical Methods in Natural Language
+      Processing; top 14% of submissions): grammatical agreement in humans and
+      language models. Co-authored with researchers from Meta AI and NeuroSpin.
+      Completed while at Sensome, alongside intravascular machine learning studies.
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="nlp-heading">
+    <h2 id="nlp-heading">Language-model papers</h2>
+    <ul>
+      <li>
+        IJCNLP 2025: first author on large language model (LLM) personality-trait
+        decoding
+      </li>
+      <li>
+        Springer CCIS / AICS 2025: first author on semantic violation detection
+        in causal language models
+      </li>
+    </ul>
+    <p class="text-link-row">
+      <a href="/publications/">All publications →</a>
+      ·
+      <a href="/">Home</a>
+    </p>
+  </section>
+</Base>

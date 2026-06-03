@@ -1,0 +1,68 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title={`Biosignal Machine Learning | ${site.name}`}
+  description="Biosignal machine learning for clinical decision support: impedance biosignals, EEG/ECG pipelines, uncertainty quantification, and regulated medical AI."
+  path="/biosignals/"
+>
+  <header class="page-header">
+    <h1>Biosignal machine learning</h1>
+    <p>
+      Impedance biosignals, EEG, and ECG pipelines built for clinical decision
+      support: catheter-lab tissue classification, psychiatric biomarker studies,
+      and regulated deployment requirements.
+    </p>
+  </header>
+
+  <section class="page-section" aria-labelledby="impedance-heading">
+    <h2 id="impedance-heading">Impedance biosignals (Sensome)</h2>
+    <p>
+      I led ML for intravascular impedance tissue classification across three
+      full-cycle clinical projects: SEPARATE, E-SEPARATE, and INSPECT. I
+      automated the pipeline from data ingestion through feature extraction to
+      inference, with uncertainty quantification at labelling and inference for
+      high-risk clinical AI use.
+    </p>
+    <p>
+      Built an impedance feature set reused across peripheral arterial disease
+      (PAD) and lung oncology trials without rebuilding pipelines per study.
+    </p>
+    <p class="text-link-row">
+      <a href="/medical-device-ai/">Regulated medical device work →</a>
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="psychiatric-heading">
+    <h2 id="psychiatric-heading">Psychiatric biosignals (Sama Therapeutics)</h2>
+    <p>
+      Owned the EEG pipeline for a transprognostic multimodal biomarker
+      algorithm predicting treatment response across major depressive disorder
+      (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive
+      disorder (OCD), and post-traumatic stress disorder (PTSD).
+      Managed automated biosignal data collection and analysis (EEG, ECG, GSR)
+      for 12,000+ subjects.
+    </p>
+    <p>
+      The validated algorithm achieved TRIPOD Type 4 external validation and
+      ranked #1 in an international competition.
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="methods-heading">
+    <h2 id="methods-heading">Methods and validation</h2>
+    <ul>
+      <li>End-to-end ML pipelines: ETL, feature stores, inference</li>
+      <li>Clinical protocol design and statistical analysis plans</li>
+      <li>Uncertainty quantification for regulated deployment contexts</li>
+      <li>Cross-institution collaboration (Belgium, Australia, France, USA)</li>
+    </ul>
+    <p class="text-link-row">
+      <a href="/publications/">Publications</a>
+      ·
+      <a href="/">Home</a>
+    </p>
+  </section>
+</Base>

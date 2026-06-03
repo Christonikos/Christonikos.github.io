@@ -1,0 +1,279 @@
+---
+description: Full context for building Christos Zacharopoulos's personal website
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Personal Website — Christos Zacharopoulos, Ph.D.
+
+## Who this is for
+
+This website belongs to **Christos Zacharopoulos, Ph.D.** — a clinical AI research leader based in Greater Paris. He is actively looking for Director / Head / VP-track roles in healthtech, medtech, and medical-device AI. Relocation is not possible; he is open to fully remote positions, including with US-funded companies.
+
+---
+
+## Strategic purpose
+
+This is a **professional identity page**, not a job-seeking signal. It leads with who Christos is and what he has built. A hiring manager who finds it should feel they discovered someone serious — not someone broadcasting availability.
+
+Three jobs:
+
+1. **Trust page** — online signals can override strong credentials. A structured, credible site reduces recruiter uncertainty before any contact is made. 57% of employers are less likely to call candidates they cannot find online.
+2. **Narrative compression** — converts a cross-disciplinary career (neuroimaging, PAD, lung oncology, NLP, biosignals) into a coherent story: *rigorous ML applied repeatedly to hard clinical problems across domains.*
+3. **Inbound surface** — makes Christos findable by recruiters searching "clinical AI", "biosignals", "regulated ML", "SaMD validation", "medical device AI".
+
+**Tone constraint**: no "open to work" signals, no availability language, no timezone/overlap framing, no contractor flexibility notes. Identity first.
+
+**This is not an academic portfolio.** One page, simple, fast.
+
+---
+
+## Identity
+
+- **Name**: Christos Zacharopoulos, Ph.D.
+- **Current role**: Head of Research, DESKi (cardiac ultrasound AI, Bordeaux)
+- **Location**: Greater Paris Metropolitan Region
+- **Email**: christonik@gmail.com
+- **LinkedIn**: linkedin.com/in/cnz
+- **GitHub**: github.com/Christonikos
+
+---
+
+## Confirmed positioning
+
+**One-sentence positioning** (use verbatim or very close):
+> Clinical AI research leader building and validating machine-learning systems for regulated medical environments.
+
+**Key message** (the thread connecting all sections):
+> I bridge AI research, clinical evidence, and regulated medical-device product development.
+
+**Recommended headline / tagline**:
+> Clinical AI Research Leader | Medical Device AI | Biosignals | Medical Imaging | Regulatory-Grade Validation
+
+---
+
+## Homepage — five questions above the fold
+
+Answer these in order, before the user scrolls:
+1. Who you are
+2. What niche you own
+3. Why you are credible
+4. What proof to click first
+5. How to contact you
+
+## Core identity principle
+
+Do not present domains symmetrically. Organise around a throughline, not a list.
+
+**Throughline**:
+> From neuroscience and neuroimaging to medical-device ML and clinical AI, the throughline in my work has been turning complex biomedical signals into systems that support real decisions.
+
+Christos's diversity (neuroimaging, PAD, lung oncology, NLP, biosignals, cardiac imaging) should read as compounding depth — not scattered curiosity.
+
+## Three flagship credibility pillars
+
+All content should map to one of these three pillars. Do not go outside them.
+
+1. **Regulated clinical AI leadership** — DESKi: medical imaging AI, FDA PCCP, CE MDR, team leadership
+2. **Medical device / biosignal ML translation** — Sensome + Sama: biosignals, clinical data, distributed collaboration, published clinical results
+3. **Deep research base in neuroscience, neuroimaging, and language** — CEA/NeuroSpin PhD under Dehaene, EMNLP 2023, Cortex 2026
+
+## Reference sites worth studying
+
+| Site | Why |
+|---|---|
+| Matthew Nour (matthewnour.com) | Dual clinical + computational identity; closest overall match |
+| Emily Alsentzer (emilyalsentzer.com) | Clinical ML + NLP; healthcare problem framed; safety/deployment bridge |
+| Nils Eckstein (nilseckstein.com) | Minimal: field owned, current role, flagship achievement |
+| David Stutz (davidstutz.de) | Outcome-first: employer, shipped products, named projects |
+| Marcella Montagnese (marcellamontagnese.com) | Institutional strip + translational trust signals |
+| Eugene Yan (eugeneyan.com) | Practitioner voice; quantified wins; testimonials |
+| Alan Akbik (alanakbik.github.io) | "Recent updates" section shows momentum |
+| Carlos Justiniano (cjus.dev) | Geography as operational fact, not apology |
+
+## Website structure (6 sections)
+
+### 1. Hero / Homepage
+- Name + one-sentence positioning
+- Subtle indicators of seniority: PhD, current role, publications count
+- Clear CTA: CV download, LinkedIn, contact
+
+### 2. Selected Impact
+Lead with the strongest proof points — not a job history, but a curated set of outcomes:
+- Biomarker algorithm ranked **#1 in international competition** (dozens of teams); TRIPOD Type 4 external validation across 10,000+ subjects; MDD, ADHD, OCD, PTSD
+- **4 first-author clinical abstracts** at PVI 2024 and JET 2025 (PAD, medical device AI)
+- **ATS 2026** (American Thoracic Society): first-in-human lung cancer study — ML analysis lead
+- **EMNLP 2023** (top 14% of submissions, A* venue): first-author NLP/LLM paper
+- Led AI/ML team at DESKi — cardiac ultrasound, FDA and CE MDR regulatory pathways
+- PhD under **Stanislas Dehaene** (Collège de France / NeuroSpin, CEA)
+
+### 3. Projects
+Public, non-confidential descriptions only. Group by domain:
+
+**Medical Device AI**
+- Sensome: ML for peripheral arterial disease diagnosis using impedance biosignals (Clotild® Smart Guidewire System)
+- Sensome: ML for in-situ lung tissue characterisation during bronchoscopic biopsy (INSPECT)
+- DESKi: cardiac ultrasound AI (classification, segmentation, detection) under FDA PCCP and CE MDR
+
+**Psychiatric / Neuroscience AI**
+- Sama Therapeutics: transprognostic multimodal biomarker algorithm (EEG/ECG pipeline) for treatment response prediction across psychiatric disorders
+
+**Language & Cognition**
+- NeuroSpin / CEA: grammatical agreement in humans and language models (EMNLP 2023)
+- NeuroSpin / CEA: PhD — hierarchical vs sequential computation during sentence processing (Cortex 2026)
+
+### 4. Publications
+List in reverse chronological order. Do not embellish authorship or venue — use the confirmed facts below.
+
+| Year | Title (short) | Venue | Role |
+|------|--------------|-------|------|
+| 2026 | "Disentangling Hierarchical and Sequential Computations during Sentence Processing" | *Cortex* (Elsevier) | First author |
+| 2026 | "In situ lung tissue characterization… INSPECT" | ATS 2026 International Conference | Third author; ML analysis lead |
+| 2025 | "In-vivo impedance identification of RBC-rich clot… CLOTILD" | JET OPEN the world 2025, Osaka | First author |
+| 2025 | "Ex-vivo machine learning impedance analysis… PAD" | JET OPEN the world 2025, Osaka | First author |
+| 2025 | "Decoding Emergent Big Five Traits in Large Language Models…" | IJCNLP 2025 | First author |
+| 2025 | "In Machina N400: Pinpointing Where a Causal Language Model Detects Semantic Violations" | Springer CCIS / AICS 2025 | First author |
+| 2024 | "In-vivo impedance identification of RBC-rich clot… SEPARATE" | PVI 2024, Paris | First author |
+| 2024 | "Ex-vivo machine learning impedance analysis… E-SEPARATE" | PVI 2024, Paris | First author |
+| 2023 | "Assessing the influence of attractor-verb distance on grammatical agreement in humans and language models" | EMNLP 2023 | First author |
+| 2022 | "A Transprognostic Multimodal Algorithm Predicts MDD, ADHD, OCD, and PTSD Treatment Response" | 6th Neuropsychiatric Drug Development Summit, Boston | Third author (EEG pipeline lead) |
+
+Link to Google Scholar. Do not link to papers that are not publicly available.
+
+### 5. CV
+- Single downloadable PDF
+- Link label: "Download CV (PDF)"
+
+### 6. Contact
+- Email: christonik@gmail.com
+- LinkedIn: linkedin.com/in/cnz
+- GitHub: github.com/Christonikos
+
+---
+
+## Credibility markers — priority order
+
+Build the site so these are visible immediately. They compress seniority the fastest.
+
+**Tier 1 (must be above the fold):**
+- Recognisable employers and institutions
+- Concrete specialisation
+- Public proof artifacts — papers, code, talks
+- Scope verbs: *led, owned, shipped, deployed, validated, managed, architected*
+- Consistency across website / LinkedIn / GitHub / Scholar
+
+**Tier 2 (on-page, easily reachable):**
+- Selected publications and venues
+- Testimonial from credible operator or researcher
+- Awards, grants, invited talks
+- Writing quality (the site itself is a signal)
+
+**Tier 3 (present but secondary):**
+- Professional photo
+- Languages
+- Location
+
+## Copywriting patterns
+
+Use these structures. They are grounded in what works for senior technical / clinical AI candidates.
+
+| Pattern | Formula |
+|---|---|
+| Identity | `I help [org type] solve [high-value problem] using [credible domain combination].` |
+| Seniority | `I work at the intersection of [A], [B], and [C], with experience spanning [research] to [deployment/validation].` |
+| Flagship project | `At [org], I [owned/led/built] [system/program], helping [stakeholder] achieve [outcome] under [constraint].` |
+| Credibility compression | `[current senior role] + [technical niche] + [clinical/regulated context] + [prior cross-border work]` |
+
+**Use**: led, designed, validated, translated, built, deployed, coordinated, published
+**Avoid**: revolutionised, transformed healthcare, visionary, passionate, world-class, robust, transformative
+
+## Geography and remote context
+
+State location plainly as an identity fact: "Based in Paris, France."
+
+Do **not** include:
+- Timezone / overlap language
+- "Open to work" or availability signals
+- Employment model flexibility notes
+- Defensive framing ("despite being based in…", "distance is not a problem")
+
+Evidence of distributed work is already implicit in the role history (Sama Therapeutics remote/Boston, international conferences). Let it speak for itself.
+
+## Testimonial
+
+One short excerpt from the Elias Mouchlianitis (CSO, Sama Therapeutics) recommendation letter is the strongest available trust signal. Themes: ownership, promotion Senior → Principal, bridge between engineering/scientific/executive teams. Only include if Christos confirms he is comfortable using it publicly.
+
+## Project cards
+
+Each project card must answer: **problem / domain → method / role → impact / why it mattered**
+
+Group by themes, not chronology:
+- **Regulated Clinical AI** (DESKi cardiac imaging, FDA/CE MDR)
+- **Medical Device & Biosignal ML** (Sensome PAD + lung, Sama psychiatric biosignals)
+- **Neuroscience & Language** (NeuroSpin PhD, EMNLP, Cortex)
+
+What to cut from the homepage: full job history, all role bullets, exhaustive publications, skills matrices, every project, minor details. If it proves completeness → move to CV. If it aids orientation → keep.
+
+## SEO
+
+**Architecture**: strong homepage + small number of supporting pages (publications, biosignals, neuroimaging, medical device AI) — not pure one-pager.
+
+**Title tag**: `Christos Zacharopoulos | Clinical AI Research Leader | Biosignals, Neuroimaging, Medical ML`
+
+**Meta description**: `Clinical AI research leader and PhD scientist working across biosignals, neuroimaging, biomedical NLP, and regulated medical machine learning.`
+
+**Keyword hierarchy**:
+- Primary (H1): Clinical AI Research Leader
+- Secondary (body): biosignal machine learning, neuroimaging ML, biomedical NLP, regulated medical AI, multimodal biomedical data
+- Tertiary (project summaries): EEG/ECG biomarkers, cardiac ultrasound AI, FDA/CE MDR validation, SEPARATE, INSPECT
+
+**Technical**:
+- JSON-LD `Person` / `ProfilePage` schema with `sameAs` links (LinkedIn, GitHub, Google Scholar, ORCID)
+- Descriptive `<title>` and `<meta description>` per page
+- Canonical URL
+- Key content in crawlable HTML — not JS-only
+- XML sitemap
+- Internal links between homepage, publications, and project pages
+
+## Content constraints — strict
+
+**Do not include:**
+- Confidential clinical data or raw patient data
+- Proprietary ML pipeline details or internal model architectures
+- Internal regulatory documents or unpublished submission materials
+- Company-owned IP or internal performance metrics not already in public abstracts
+- Anything not already publicly available
+
+When in doubt, describe the domain and the type of work, not the specifics.
+
+---
+
+## Tone and style
+
+- Senior, precise, direct — not academic, not self-promotional
+- No buzzwords: avoid "passionate", "innovative", "cutting-edge", "robust", "transformative"
+- Statements should be verifiable — every claim backed by a publication, a company name, or a role title
+- English only; British or American English consistently (not mixed)
+
+---
+
+## Design principles
+
+- Fast to load, minimal dependencies
+- Mobile-friendly
+- Clean typography — the content carries the credibility, not the design
+- No animations that distract from reading
+- Accessible (WCAG AA minimum)
+- Dark/light mode support is a nice-to-have, not required
+
+---
+
+## Source of truth
+
+All factual content about Christos lives in the wiki at `../wiki/`. Key pages:
+- `../wiki/christos-zacharopoulos.md` — master profile, positioning
+- `../wiki/publications.md` — full publications list with authorship confirmed from source documents
+- `../wiki/employment-history.md` — work history and confirmed achievements
+- `../wiki/website-strategy.md` — strategic rationale for this site
+
+**Never invent metrics, dates, or authorship.** If a fact is not in the wiki, ask before using it.

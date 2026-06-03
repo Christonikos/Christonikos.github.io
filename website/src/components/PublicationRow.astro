@@ -1,0 +1,77 @@
+---
+import type { Publication } from "../data/publications";
+
+interface Props {
+  pub: Publication;
+}
+
+const { pub } = Astro.props;
+
+const figures =
+  pub.figures ?? (pub.figure ? [pub.figure] : []);
+
+function isWideFigure(fig: { width?: number; height?: number }) {
+  return (fig.width ?? 960) / (fig.height ?? 540) > 1.6;
+}
+
+function withMetrics(text: string): string {
+  return text.replace(
+    /(R²\s*=\s*[\d.]+|\d+(?:\.\d+)?%|\d[\d,]*\+?\s*(?:patients|subjects)?|AUC[^.]*~?[\d.]+[–-][\d.]+)/g,
+    '<span class="metric">$1</span>',
+  );
+}
+
+const statusLabel =
+  pub.status === "abstract" ? "Conference abstract" : null;
+---
+
+<article class="pub-row">
+  <div class="pub-main">
+    {
+      pub.type && (
+        <p class="pub-type">{pub.type}</p>
+      )
+    }
+    <h3 class="pub-title">{pub.title}</h3>
+    <p class="pub-significance" set:html={withMetrics(pub.summary)} />
+    {
+      figures.map((fig) => (
+        <figure class:list={["pub-figure", isWideFigure(fig) && "pub-figure--wide"]}>
+          <img
+            src={fig.src}
+            alt={fig.alt}
+            width={fig.width ?? 960}
+            height={fig.height ?? 540}
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="pub-figure-caption">{fig.caption}</figcaption>
+        </figure>
+      ))
+    }
+    {
+      pub.alsoPresentedAt && pub.alsoPresentedAt.length > 0 && (
+        <p class="pub-also">
+          Also presented at {pub.alsoPresentedAt.join("; ")}
+        </p>
+      )
+    }
+    {
+      pub.links && pub.links.length > 0 && (
+        <nav class="resource-links" aria-label={`Links for ${pub.title}`}>
+          {pub.links.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      )
+    }
+  </div>
+  <div class="pub-meta">
+    <p class="pub-venue">{pub.venue}</p>
+    <p class="pub-year">{pub.year}</p>
+    {statusLabel && <p class="pub-status">{statusLabel}</p>}
+    <p class="pub-role">{pub.role}</p>
+  </div>
+</article>

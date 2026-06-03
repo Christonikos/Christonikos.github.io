@@ -1,0 +1,66 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title={`Medical Device AI | ${site.name}`}
+  description="Regulated clinical AI and medical device machine learning: cardiac ultrasound AI, FDA PCCP, CE MDR validation, SEPARATE, and INSPECT."
+  path="/medical-device-ai/"
+>
+  <header class="page-header">
+    <h1>Medical device AI</h1>
+    <p>
+      Machine-learning systems for regulated medical environments: cardiac
+      imaging algorithms, intravascular tissue characterisation, and
+      bronchoscopic decision support under FDA and CE MDR pathways.
+    </p>
+  </header>
+
+  <section class="page-section" aria-labelledby="deski-heading">
+    <h2 id="deski-heading">Cardiac ultrasound AI (DESKi)</h2>
+    <p>
+      As Head of Research, I lead AI/ML for cardiac ultrasound (classification,
+      segmentation, detection) under FDA PCCP and CE MDR pathways. I steer
+      research direction, build validation documentation as milestones are
+      reached, and coordinate across AI, clinical, and regulatory functions.
+    </p>
+  </section>
+
+  <section class="page-section" aria-labelledby="separate-heading">
+    <h2 id="separate-heading">SEPARATE and E-SEPARATE (Sensome, PAD)</h2>
+    <p>
+      Applied multimodal ML to peripheral arterial disease using the Clotild®
+      Smart Guidewire System. First author on four clinical abstracts presented
+      at PVI 2024 and JET OPEN the world 2025.
+    </p>
+    <ul>
+      <li>
+        SEPARATE (in-vivo): 17 patients; 100% primary endpoint success;
+        impedance-based red blood cell (RBC)-rich clot identification
+      </li>
+      <li>
+        E-SEPARATE (ex-vivo): 15 patients; R²=0.79 vs histology gold standard
+      </li>
+    </ul>
+    <p>Clotild® holds FDA Breakthrough Device designation.</p>
+  </section>
+
+  <section class="page-section" aria-labelledby="inspect-heading">
+    <h2 id="inspect-heading">INSPECT (Sensome, lung cancer)</h2>
+    <p>
+      First-in-human study of in-situ lung tissue characterisation during
+      bronchoscopic biopsy. ML analysis lead; third author on ATS 2026 abstract.
+    </p>
+    <ul>
+      <li>26 patients across Australia and France</li>
+      <li>80.9% accuracy for healthy vs lesion tissue</li>
+      <li>Learning curves projecting above 90% with additional data</li>
+    </ul>
+    <p class="text-link-row">
+      <a href="/biosignals/">Biosignal methods</a>
+      ·
+      <a href="/publications/">Publications</a>
+    </p>
+  </section>
+</Base>

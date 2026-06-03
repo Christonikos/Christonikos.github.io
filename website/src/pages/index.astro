@@ -1,0 +1,114 @@
+---
+import Base from "../layouts/Base.astro";
+import ProfileStrip from "../components/ProfileStrip.astro";
+import EducationRow from "../components/EducationRow.astro";
+import WorkCard from "../components/WorkCard.astro";
+import PublicationRow from "../components/PublicationRow.astro";
+import { site, links } from "../data/site";
+import { selectedWork } from "../data/projects";
+import { featuredPublications } from "../data/publications";
+import { education } from "../data/education";
+---
+
+<Base title={site.pageTitle} path="/">
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-heading" class="display">
+          {site.name}<span class="hero-credentials">, {site.credentials}</span>
+        </h1>
+        <p class="hero-headline">{site.headline}</p>
+        <p class="hero-thesis">{site.thesis}</p>
+        <p class="hero-sub">{site.subheadline}</p>
+        <p class="hero-bridge">{site.bridge}</p>
+        <nav class="hero-links" aria-label="Proof links">
+          <a href={links.cv}>CV</a>
+          <span class="hero-sep" aria-hidden="true">·</span>
+          <a href={links.scholar}>Google Scholar</a>
+          <span class="hero-sep" aria-hidden="true">·</span>
+          <a href={links.linkedin}>LinkedIn</a>
+          <span class="hero-sep" aria-hidden="true">·</span>
+          <a href={links.github}>GitHub</a>
+          <span class="hero-sep" aria-hidden="true">·</span>
+          <a href={links.email}>Email</a>
+        </nav>
+        <p class="hero-location">{site.heroLocation}</p>
+        <ProfileStrip />
+      </div>
+      <figure class="hero-photo hero-photo--blend">
+        <div class="hero-photo-frame">
+          <img
+            src={site.headshot}
+            alt="Portrait of Christos Zacharopoulos"
+            width="1024"
+            height="1024"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="work" class="section" aria-labelledby="work-heading">
+    <p class="section-label">Selected work</p>
+    <h2 id="work-heading" class="display">Work across four areas</h2>
+    <p class="section-intro">
+      Cardiac ultrasound, bioimpedance, psychiatric biomarkers, and
+      neuroimaging and language models, from study design through regulatory
+      evidence.
+    </p>
+    <div class="work-list">
+      {selectedWork.map((item) => <WorkCard item={item} />)}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="publications-heading">
+    <p class="section-label">Selected outputs</p>
+    <h2 id="publications-heading" class="display">Publications</h2>
+    <div class="pub-list">
+      {featuredPublications.map((pub) => <PublicationRow pub={pub} />)}
+    </div>
+    <p class="text-link-row">
+      <a href="/publications/">All publications →</a>
+    </p>
+  </section>
+
+  <section id="about" class="section" aria-labelledby="about-heading">
+    <p class="section-label">About</p>
+    <h2 id="about-heading" class="display">Background</h2>
+    <p class="credentials-line">{site.credentialsLine}</p>
+    {site.about.map((paragraph) => <p>{paragraph}</p>)}
+  </section>
+
+  <section id="education" class="section" aria-labelledby="education-heading">
+    <p class="section-label">Education</p>
+    <h2 id="education-heading" class="display">Training</h2>
+    <div class="edu-list">
+      {education.map((entry) => <EducationRow entry={entry} />)}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="collaboration-heading">
+    <div class="panel">
+      <p class="section-label">Collaboration</p>
+      <h2 id="collaboration-heading" class="display panel-title">
+        Collaboration
+      </h2>
+      <p>{site.collaboration}</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-block" aria-labelledby="contact-heading">
+    <p class="section-label">Contact</p>
+    <h2 id="contact-heading" class="display">Get in touch</h2>
+    <p>{site.contactIntro}</p>
+    <nav class="contact-links" aria-label="Contact links">
+      <a href={links.email}>{site.email}</a>
+      <a href={links.cv}>Download CV</a>
+      <a href={links.scholar}>Google Scholar</a>
+      <a href={links.linkedin}>LinkedIn</a>
+      <a href={links.github}>GitHub</a>
+    </nav>
+  </section>
+</Base>

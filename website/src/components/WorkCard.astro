@@ -1,0 +1,55 @@
+---
+import type { WorkItem } from "../data/projects";
+
+interface Props {
+  item: WorkItem;
+}
+
+const { item } = Astro.props;
+
+/** Wrap numeric metrics in monospace spans */
+function withMetrics(text: string): string {
+  return text.replace(
+    /(R²\s*=\s*[\d.]+|\d+(?:\.\d+)?%|\d[\d,]*\+?\s*(?:patients|subjects)?)/g,
+    '<span class="metric">$1</span>',
+  );
+}
+---
+
+<article class="work-card">
+  <h3 class="work-title">{item.title}</h3>
+  <p class="work-context">{item.context}</p>
+  <p class="work-summary">{item.summary}</p>
+  {
+    item.tags.length > 0 && (
+      <ul class="work-tags" aria-label="Project tags">
+        {item.tags.map((tag) => (
+          <li class="work-tag">{tag}</li>
+        ))}
+      </ul>
+    )
+  }
+  <ul class="work-bullets">
+    {item.bullets.map((bullet) => (
+      <li set:html={withMetrics(bullet)} />
+    ))}
+  </ul>
+  {
+    item.href && (
+      <p class="work-link">
+        <a href={item.href}>{item.hrefLabel ?? "Read more"} →</a>
+      </p>
+    )
+  }
+  {
+    item.links && item.links.length > 0 && (
+      <nav class="resource-links" aria-label={`External links for ${item.title}`}>
+        {item.links.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    )
+  }
+</article>

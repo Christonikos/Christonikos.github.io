@@ -1,0 +1,36 @@
+---
+import type { EducationEntry } from "../data/education";
+
+interface Props {
+  entry: EducationEntry;
+}
+
+const { entry } = Astro.props;
+---
+
+<article class="edu-row">
+  <div class="edu-main">
+    <h3 class="edu-degree">{entry.degree}</h3>
+    <p class="edu-institution">{entry.institution}</p>
+    {
+      entry.detail && (
+        <p class="edu-detail">{entry.detail}</p>
+      )
+    }
+    {
+      entry.links && entry.links.length > 0 && (
+        <nav class="resource-links" aria-label={`Links for ${entry.degree}`}>
+          {entry.links.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      )
+    }
+  </div>
+  <div class="edu-meta">
+    <p class="edu-location">{entry.location}</p>
+    <p class="edu-period">{entry.period}</p>
+  </div>
+</article>
