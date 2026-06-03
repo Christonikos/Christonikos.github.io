@@ -41,7 +41,7 @@ export const publicationDomainMeta: Record<
   "clinical-ai-biosignals": {
     title: "Clinical AI & biomedical signal validation",
     intro:
-      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance for peripheral arterial disease (PAD) and lung biopsy at Sensome, plus electroencephalography (EEG)-led psychiatric treatment-response work at Sama Therapeutics. Sensome study codes (SEPARATE, E-SEPARATE, INSPECT) are internal names; section headings describe the clinical question first.",
+      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance for peripheral arterial disease (PAD) and lung biopsy at Sensome, plus electroencephalography (EEG)-led psychiatric treatment-response work at Sama Therapeutics.",
   },
   "cognitive-neuroscience-language": {
     title: "Cognitive neuroscience & language processing",
@@ -51,7 +51,7 @@ export const publicationDomainMeta: Record<
   "llm-evaluation": {
     title: "Language-model evaluation & representation",
     intro:
-      "Computational studies of large language model (LLM) behaviour and internal representations (no human neuroimaging): personality-trait expression and semantic-violation detection in causal LMs.",
+      "Computational studies of large language model (LLM) behaviour and internal representations: personality-trait expression and semantic-violation detection in causal LMs.",
   },
   "earlier-work": {
     title: "Earlier work",
@@ -125,28 +125,28 @@ export const publicationGroupMeta: Record<
     title:
       "Psychiatric treatment-response prediction from EEG biomarkers (Sama Therapeutics)",
     intro:
-      "Transprognostic multimodal model across major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD), with Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) Type 4 external validation. Christos led the electroencephalography (EEG) pipeline.",
+      "Multimodal model predicting treatment response across four psychiatric conditions from electroencephalography (EEG) and trial data. Christos led the EEG pipeline.",
   },
   "neuroimaging-sentence": {
-    tocLabel: "Cortex: M/EEG vs LSTM",
+    tocLabel: "Sentence structure decoding in MEG/EEG (Cortex 2026)",
     title: "Hierarchical vs sequential sentence processing (*Cortex*)",
     intro:
       "PhD work at NeuroSpin / Sorbonne University. In human MEG/EEG, only structural (hierarchical) effects decode above chance; transition and congruity do not. Compared to a two-layer long short-term memory (LSTM) language model that decodes all three.",
   },
   psycholinguistics: {
-    tocLabel: "Grammatical agreement (EMNLP 2023)",
+    tocLabel: "Grammatical agreement in humans and LMs (EMNLP 2023)",
     title: "Psycholinguistics and computational modelling",
     intro:
       "Human grammatical agreement versus language models (LMs). First-author EMNLP 2023 paper (Empirical Methods in Natural Language Processing) with Meta AI and NeuroSpin co-authors.",
   },
   "llm-evaluation": {
-    tocLabel: "LLM evaluation (IJCNLP, Springer)",
+    tocLabel: "LLM personality traits and semantic violations (IJCNLP, Springer)",
     title: "LLM evaluation and representation analysis",
     intro:
       "Personality-trait probing and layer-wise semantic-violation decoding in causal language models.",
   },
   "hellenic-affective": {
-    tocLabel: "Hellenic word norms (SAN2016)",
+    tocLabel: "Hellenic word valence and arousal norms (SAN2016)",
     title: "Valence and arousal ratings for Hellenic words",
     intro:
       "Cross-sectional psychometrics (Aristotle University of Thessaloniki): valence and arousal norms across the adult lifespan.",
@@ -239,7 +239,7 @@ export const publications: Publication[] = [
     role: "Third author · EEG pipeline lead",
     studyPhase: "Clinical · TRIPOD Type 4 validation",
     summary:
-      "Multimodal model for major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD); ranked first in the TDBRAIN international competition.",
+      "Major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD); Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) Type 4 external validation; ranked first in the TDBRAIN international competition.",
     type: "Conference poster",
     group: "psychiatric-biomarkers",
     links: [
