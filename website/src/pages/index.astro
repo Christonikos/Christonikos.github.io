@@ -22,7 +22,12 @@ import { education } from "../data/education";
         <p class="hero-sub">{site.subheadline}</p>
         <p class="hero-bridge">{site.bridge}</p>
         <nav class="hero-links" aria-label="Proof links">
-          <a href={links.cv}>CV</a>
+          <a
+            href={links.cv}
+            download={site.cvDownloadName}
+            target="_blank"
+            rel="noopener noreferrer">CV</a
+          >
           <span class="hero-sep" aria-hidden="true">·</span>
           <a href={links.scholar}>Google Scholar</a>
           <span class="hero-sep" aria-hidden="true">·</span>
@@ -105,7 +110,12 @@ import { education } from "../data/education";
     <p>{site.contactIntro}</p>
     <nav class="contact-links" aria-label="Contact links">
       <a href={links.email}>{site.email}</a>
-      <a href={links.cv}>Download CV</a>
+      <a
+        href={links.cv}
+        download={site.cvDownloadName}
+        target="_blank"
+        rel="noopener noreferrer">Download CV</a
+      >
       <a href={links.scholar}>Google Scholar</a>
       <a href={links.linkedin}>LinkedIn</a>
       <a href={links.github}>GitHub</a>

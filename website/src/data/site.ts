@@ -41,7 +41,8 @@ export const links = {
   github: "https://github.com/Christonikos",
   scholar:
     "https://scholar.google.com/citations?hl=en&q=Christos+Zacharopoulos+NeuroSpin",
-  cv: "/christos-zacharopoulos-cv.pdf",
+  cv: "/christos-zacharopoulos-cv.docx",
+  cvDownloadName: "christos-zacharopoulos-cv.docx",
 } as const;
 
 export const profileStrip = [

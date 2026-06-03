@@ -7,10 +7,10 @@ export type PublicationType =
   | "Conference poster";
 
 export type PublicationDomainId =
-  | "bioimpedance"
-  | "psychiatric-biomarkers"
-  | "psychometrics-psychology"
-  | "neuroimaging-nlp";
+  | "clinical-ai-biosignals"
+  | "cognitive-neuroscience-language"
+  | "llm-evaluation"
+  | "earlier-work";
 
 export type PublicationGroupId =
   | "pad-clot"
@@ -25,46 +25,46 @@ export const publicationGroupDomain: Record<
   PublicationGroupId,
   PublicationDomainId
 > = {
-  "pad-clot": "bioimpedance",
-  "lung-inspect": "bioimpedance",
-  "psychiatric-biomarkers": "psychiatric-biomarkers",
-  "neuroimaging-sentence": "neuroimaging-nlp",
-  psycholinguistics: "neuroimaging-nlp",
-  "llm-evaluation": "neuroimaging-nlp",
-  "hellenic-affective": "psychometrics-psychology",
+  "pad-clot": "clinical-ai-biosignals",
+  "lung-inspect": "clinical-ai-biosignals",
+  "psychiatric-biomarkers": "clinical-ai-biosignals",
+  "neuroimaging-sentence": "cognitive-neuroscience-language",
+  psycholinguistics: "cognitive-neuroscience-language",
+  "llm-evaluation": "llm-evaluation",
+  "hellenic-affective": "earlier-work",
 };
 
 export const publicationDomainMeta: Record<
   PublicationDomainId,
   { title: string; intro: string }
 > = {
-  bioimpedance: {
-    title: "Bioimpedance",
+  "clinical-ai-biosignals": {
+    title: "Clinical AI & biomedical signal validation",
     intro:
-      "Intravascular bioimpedance machine learning (ML) at Sensome: peripheral arterial disease (PAD) clot characterisation and lung biopsy tissue classification.",
+      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance at Sensome (PAD clot characterisation, lung biopsy tissue classification) and EEG-led psychiatric treatment-response prediction at Sama Therapeutics.",
   },
-  "psychiatric-biomarkers": {
-    title: "Psychiatric biomarkers",
+  "cognitive-neuroscience-language": {
+    title: "Cognitive neuroscience & language processing",
     intro:
-      "Electroencephalography (EEG)-led multimodal biomarkers for psychiatric treatment-response prediction at Sama Therapeutics.",
+      "Human neural and behavioural data during sentence processing, compared with computational models: NeuroSpin PhD work in *Cortex* (MEG/EEG decoding) and first-author EMNLP psycholinguistics with language model (LM) comparison.",
   },
-  "psychometrics-psychology": {
-    title: "Psychometrics & psychology",
+  "llm-evaluation": {
+    title: "Language-model evaluation & representation",
     intro:
-      "Affective and psychometric research: normative ratings of emotional language across the adult lifespan (Aristotle University of Thessaloniki).",
+      "Computational studies of large language model (LLM) behaviour and internal representations (no human neuroimaging): personality-trait expression and semantic-violation detection in causal LMs.",
   },
-  "neuroimaging-nlp": {
-    title: "Neuroimaging & language models",
+  "earlier-work": {
+    title: "Earlier work",
     intro:
-      "NeuroSpin PhD output in *Cortex* (M/EEG decoding of sentence structure) plus psycholinguistics and large language model (LLM) / natural language processing (NLP) papers.",
+      "Earlier contributions before the clinical-AI and NeuroSpin research lines.",
   },
 };
 
 export const publicationDomainOrder: PublicationDomainId[] = [
-  "neuroimaging-nlp",
-  "bioimpedance",
-  "psychiatric-biomarkers",
-  "psychometrics-psychology",
+  "clinical-ai-biosignals",
+  "cognitive-neuroscience-language",
+  "llm-evaluation",
+  "earlier-work",
 ];
 
 export type PublicationLink = {
@@ -116,9 +116,9 @@ export const publicationGroupMeta: Record<
       "INSPECT is Sensome's first-in-human study of bioimpedance on a bronchoscopy stylet for tool-in-lesion confirmation during lung biopsy (central and peripheral lesions).",
   },
   "psychiatric-biomarkers": {
-    tocLabel: "Treatment-response prediction (Sama)",
+    tocLabel: "Psychiatric treatment-response (Sama)",
     title:
-      "Psychiatric biomarkers: treatment-response prediction (Sama Therapeutics)",
+      "Psychiatric treatment-response prediction (Sama Therapeutics)",
     intro:
       "Transprognostic multimodal model for major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD). Christos led the electroencephalography (EEG) pipeline.",
   },
@@ -136,15 +136,15 @@ export const publicationGroupMeta: Record<
   },
   "llm-evaluation": {
     tocLabel: "LLM evaluation (IJCNLP, Springer)",
-    title: "Language model evaluation and behaviour",
+    title: "LLM evaluation and representation analysis",
     intro:
-      "Large language model (LLM) studies without neuroimaging claims: personality-trait decoding and semantic-violation detection in causal LMs.",
+      "Personality-trait probing and layer-wise semantic-violation decoding in causal language models.",
   },
   "hellenic-affective": {
     tocLabel: "Hellenic word norms (SAN2016)",
-    title: "Valence and arousal ratings across the adult lifespan",
+    title: "Valence and arousal ratings for Hellenic words",
     intro:
-      "Cross-sectional psychometrics at Aristotle University of Thessaloniki (Bamidis lab): self-reported valence and arousal for 120 Hellenic words in young, middle-aged, and older adults.",
+      "Cross-sectional psychometrics (Aristotle University of Thessaloniki): valence and arousal norms across the adult lifespan.",
   },
 };
 
@@ -152,10 +152,10 @@ export const publicationGroupOrder: PublicationGroupId[] = [
   "pad-clot",
   "lung-inspect",
   "psychiatric-biomarkers",
-  "hellenic-affective",
   "neuroimaging-sentence",
   "psycholinguistics",
   "llm-evaluation",
+  "hellenic-affective",
 ];
 
 export const publications: Publication[] = [
@@ -166,7 +166,7 @@ export const publications: Publication[] = [
     venue: "JET OPEN the world 2025, Osaka",
     role: "First author",
     summary:
-      "In-vivo clinical validation of impedance-based red blood cell (RBC)-rich clot identification in peripheral arterial disease (PAD).",
+      "In-vivo clinical validation (n = 17); 100% primary endpoint success for lesion impedance data. RBC-rich clot identification in peripheral arterial disease (PAD).",
     featured: true,
     type: "Clinical abstract",
     alsoPresentedAt: ["Paris Vascular Insights (PVI) 2024, Paris"],
@@ -177,23 +177,6 @@ export const publications: Publication[] = [
         href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
       },
       { label: "Sensome", href: "https://www.sensome.com/" },
-    ],
-  },
-  {
-    year: 2024,
-    title:
-      "In-vivo impedance identification of RBC-rich clot in PAD (SEPARATE)",
-    venue: "Paris Vascular Insights (PVI) 2024, Paris",
-    role: "First author",
-    summary:
-      "17 patients; 100% primary endpoint success for lesion impedance data in peripheral arterial disease (PAD).",
-    type: "Clinical abstract",
-    group: "pad-clot",
-    links: [
-      {
-        label: "Coverage (Vascular News)",
-        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
-      },
     ],
   },
   {
@@ -203,7 +186,7 @@ export const publications: Publication[] = [
     venue: "JET OPEN the world 2025, Osaka",
     role: "First author",
     summary:
-      "Ex-vivo machine learning (ML) versus histology gold standard in peripheral arterial disease (PAD); coefficient of determination R²=0.79.",
+      "Ex-vivo ML versus histology gold standard (n = 15); coefficient of determination R² = 0.79 in peripheral arterial disease (PAD).",
     featured: true,
     type: "Clinical abstract",
     alsoPresentedAt: ["Paris Vascular Insights (PVI) 2024, Paris"],
@@ -214,23 +197,6 @@ export const publications: Publication[] = [
         href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
       },
       { label: "Sensome", href: "https://www.sensome.com/" },
-    ],
-  },
-  {
-    year: 2024,
-    title:
-      "Ex-vivo machine learning impedance analysis for thrombus in PAD (E-SEPARATE)",
-    venue: "Paris Vascular Insights (PVI) 2024, Paris",
-    role: "First author",
-    summary:
-      "15 patients; R²=0.79 versus histology in peripheral arterial disease (PAD).",
-    type: "Clinical abstract",
-    group: "pad-clot",
-    links: [
-      {
-        label: "Coverage (Vascular News)",
-        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
-      },
     ],
   },
   {

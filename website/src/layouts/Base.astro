@@ -81,6 +81,13 @@ const nav = [
             nav.map((item) => (
               <a
                 href={item.href}
+                download={
+                  item.label === "CV" ? site.cvDownloadName : undefined
+                }
+                target={item.label === "CV" ? "_blank" : undefined}
+                rel={
+                  item.label === "CV" ? "noopener noreferrer" : undefined
+                }
                 aria-current={
                   item.label === "Publications" &&
                   path.startsWith("/publications")
