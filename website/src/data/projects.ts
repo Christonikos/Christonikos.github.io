@@ -41,8 +41,8 @@ export const selectedWork: WorkItem[] = [
       "ML pipelines for impedance-based tissue and clot characterisation across three full-cycle clinical studies.",
     tags: ["Bioimpedance", "Clinical validation", "R² = 0.79", "Australia · France"],
     bullets: [
-      "SEPARATE / E-SEPARATE (PAD): first author at PVI 2024 and JET 2025.",
-      "INSPECT (lung cancer): ML analysis lead; first-in-human study, ATS 2026.",
+      "PAD clot characterisation (SEPARATE / E-SEPARATE): first author; PVI 2024 and JET 2025.",
+      "Lung biopsy tissue classification (INSPECT): ML analysis lead; first-in-human study, ATS 2026.",
       "Automated ingestion-to-inference pipelines with uncertainty quantification at labelling and inference.",
     ],
     href: "/biosignals/",
@@ -50,8 +50,8 @@ export const selectedWork: WorkItem[] = [
     links: [
       { label: "Sensome", href: "https://www.sensome.com/" },
       {
-        label: "PAD trial coverage",
-        href: "https://www.medicaldevice-network.com/news/sensome-clotild-pad-treatment/",
+        label: "About the SEPARATE and E-SEPARATE studies (Vascular News)",
+        href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const selectedWork: WorkItem[] = [
       "Co-authored with Meta AI, Collège de France, and ENS researchers.",
     ],
     href: "/neuroimaging-ml/",
-    hrefLabel: "Neuroimaging and language models",
+    hrefLabel: "Cognitive neuroscience and language",
     links: [
       {
         label: "EMNLP 2023 paper",

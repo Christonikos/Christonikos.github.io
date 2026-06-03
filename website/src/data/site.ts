@@ -7,9 +7,7 @@ export const site = {
   headline:
     "Clinical AI scientist for biosignals, medical imaging, and regulated deployment",
   thesis:
-    "I extract clinically meaningful signal from biomedical data across organ systems, clinical contexts, and regulated deployment paths.",
-  subheadline:
-    "I build and validate machine-learning systems across biosignals, neuroimaging, medical imaging, and regulated clinical-AI settings.",
+    "I build and validate machine-learning systems that turn complex biomedical signals into evidence for clinical and regulatory decisions across biosignals, imaging, and regulated deployment.",
   bridge:
     "NeuroSpin PhD; clinical ML at Sensome, Sama Therapeutics, and DESKi.",
   credentialsLine:

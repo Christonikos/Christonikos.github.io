@@ -239,7 +239,7 @@ export const publications: Publication[] = [
     role: "Third author · EEG pipeline lead",
     studyPhase: "Clinical · TRIPOD Type 4 validation",
     summary:
-      "Major depressive disorder (MDD), attention-deficit/hyperactivity disorder (ADHD), obsessive-compulsive disorder (OCD), and post-traumatic stress disorder (PTSD); Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) Type 4 external validation; ranked first in the TDBRAIN international competition.",
+      "MDD, ADHD, OCD, and PTSD; TRIPOD Type 4 external validation; ranked first in the TDBRAIN international competition.",
     type: "Conference poster",
     group: "psychiatric-biomarkers",
     links: [
