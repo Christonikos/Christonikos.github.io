@@ -4,7 +4,7 @@ import ProfileStrip from "../components/ProfileStrip.astro";
 import EducationRow from "../components/EducationRow.astro";
 import WorkCard from "../components/WorkCard.astro";
 import PublicationRow from "../components/PublicationRow.astro";
-import { site, links } from "../data/site";
+import { site, links, contactInquiries, mailtoWithSubject } from "../data/site";
 import { selectedWork } from "../data/projects";
 import { featuredPublications } from "../data/publications";
 import { education } from "../data/education";
@@ -54,6 +54,13 @@ import { education } from "../data/education";
     </div>
   </section>
 
+  <section id="about" class="section" aria-labelledby="about-heading">
+    <p class="section-label">About</p>
+    <h2 id="about-heading" class="display">Background</h2>
+    <p class="credentials-line">{site.credentialsLine}</p>
+    {site.about.map((paragraph) => <p>{paragraph}</p>)}
+  </section>
+
   <section id="work" class="section" aria-labelledby="work-heading">
     <p class="section-label">Selected work</p>
     <h2 id="work-heading" class="display">Work across four areas</h2>
@@ -78,13 +85,6 @@ import { education } from "../data/education";
     </p>
   </section>
 
-  <section id="about" class="section" aria-labelledby="about-heading">
-    <p class="section-label">About</p>
-    <h2 id="about-heading" class="display">Background</h2>
-    <p class="credentials-line">{site.credentialsLine}</p>
-    {site.about.map((paragraph) => <p>{paragraph}</p>)}
-  </section>
-
   <section id="education" class="section" aria-labelledby="education-heading">
     <p class="section-label">Education</p>
     <h2 id="education-heading" class="display">Training</h2>
@@ -99,7 +99,7 @@ import { education } from "../data/education";
       <h2 id="collaboration-heading" class="display panel-title">
         Collaboration
       </h2>
-      <p>{site.collaboration}</p>
+      {site.collaboration.map((paragraph) => <p>{paragraph}</p>)}
     </div>
   </section>
 
@@ -107,8 +107,17 @@ import { education } from "../data/education";
     <p class="section-label">Contact</p>
     <h2 id="contact-heading" class="display">Get in touch</h2>
     <p>{site.contactIntro}</p>
+    <nav class="contact-inquiries" aria-label="Email by topic">
+      {
+        contactInquiries.map((item) => (
+          <a href={mailtoWithSubject(item.subject)}>{item.label}</a>
+        ))
+      }
+    </nav>
+    <p class="contact-sub">
+      Or write directly: <a href={links.email}>{site.email}</a>
+    </p>
     <nav class="contact-links" aria-label="Contact links">
-      <a href={links.email}>{site.email}</a>
       <a
         href={links.cv}
         download={site.cvDownloadName}

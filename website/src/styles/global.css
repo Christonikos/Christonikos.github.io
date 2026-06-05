@@ -747,9 +747,28 @@ main {
   padding-bottom: 0;
 }
 
-.contact-sub {
-  color: var(--text-secondary);
+.contact-inquiries {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
   font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.contact-inquiries a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.contact-inquiries a:hover {
+  text-decoration: underline;
+}
+
+.contact-sub {
+  margin-top: 1.25rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
 }
 
 .contact-links {
