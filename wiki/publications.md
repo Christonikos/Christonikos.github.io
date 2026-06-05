@@ -13,7 +13,7 @@
 Live structure matches [[website-publications-taxonomy]]:
 
 1. **Clinical AI & biomedical signal validation** — PAD (SEPARATE, E-SEPARATE), INSPECT, Sama transprognostic poster  
-2. **Cognitive neuroscience & language processing** — *Cortex* 2026, EMNLP 2023  
+2. **Cognitive neuroscience & language processing** — *Cortex* 2026, EMNLP 2023 (Singapore)  
 3. **Language-model evaluation & representation** — IJCNLP 2025, In Machina N400 (Springer AICS 2025)  
 4. **Earlier work** — Hellenic valence/arousal norms (SAN2016)
 

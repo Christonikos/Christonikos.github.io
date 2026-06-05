@@ -18,6 +18,9 @@
 - `wiki/publications.md` — Sama contribution + EMNLP Singapore
 - `wiki/employment-history.md` — Sama feature extraction scope (user-confirmed)
 - `wiki/source-overleaf-emnlp-interference-2023.md` — Singapore venue
+- `wiki/christos-zacharopoulos.md` — live website copy notes
+
+**Follow-up (same day)**: Publications group titles aligned with work cards (multimodal psychiatric; broader Cortex group title).
 
 ---
 

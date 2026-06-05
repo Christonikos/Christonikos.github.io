@@ -121,17 +121,17 @@ export const publicationGroupMeta: Record<
       "Tool-in-lesion confirmation during bronchoscopic lung biopsy (central and peripheral lesions). The INSPECT study (Sensome) is a first-in-human evaluation of bioimpedance on a bronchoscopy stylet.",
   },
   "psychiatric-biomarkers": {
-    tocLabel: "Psychiatric treatment-response from EEG biomarkers (Sama)",
-    title:
-      "Psychiatric treatment-response prediction from EEG biomarkers (Sama Therapeutics)",
+    tocLabel: "Psychiatric treatment-response from multimodal biomarkers",
+    title: "Psychiatric treatment-response prediction (multimodal biomarkers)",
     intro:
       "Multimodal model predicting treatment response across four psychiatric conditions. Christos led feature extraction across EEG, ECG, and psychometric modalities.",
   },
   "neuroimaging-sentence": {
-    tocLabel: "Sentence structure decoding in MEG/EEG (Cortex 2026)",
-    title: "Hierarchical vs sequential sentence processing (*Cortex*)",
+    tocLabel: "Language processing in the brain and in models (Cortex 2026)",
+    title:
+      "Human language processing and computational language models (*Cortex*)",
     intro:
-      "PhD work at NeuroSpin / Sorbonne University. In human MEG/EEG, only structural (hierarchical) effects decode above chance; transition and congruity do not. Compared to a two-layer long short-term memory (LSTM) language model that decodes all three.",
+      "PhD work at NeuroSpin / Sorbonne University: how humans and language models process sentence structure. MEG/EEG during reading versus a two-layer long short-term memory (LSTM) language model.",
   },
   psycholinguistics: {
     tocLabel: "Grammatical agreement in humans and LMs (EMNLP 2023)",
