@@ -9,15 +9,14 @@ export const site = {
   thesis:
     "I build and validate machine-learning systems that turn complex biomedical signals into evidence for clinical and regulatory decisions across biosignals, imaging, and regulated deployment.",
   bridge:
-    "NeuroSpin PhD; clinical ML at Sensome, Sama Therapeutics, and DESKi.",
+    "Senior → Principal → Head of Research · PhD cognitive neuroscience",
   credentialsLine:
     "Ph.D. in cognitive neuroscience · Sorbonne University / NeuroSpin · supervised by Prof. Stanislas Dehaene",
   about: [
     "PhD-trained clinical AI scientist. I have led teams and delivered clinical ML across biosignals, medical imaging, psychiatric biomarkers, peripheral arterial disease, lung cancer, and cardiac care, with study design, statistical analysis plans, external validation, and regulatory-facing evidence for FDA and CE MDR pathways.",
-    "Clinical roles at Sensome, Sama Therapeutics, and DESKi follow a NeuroSpin PhD in cognitive neuroscience.",
   ],
   collaboration: [
-    "I work with clinical investigators, regulatory specialists, and ML engineers on catheter-lab studies, psychiatric trial cohorts, and cardiac imaging R&D. Recent clinical delivery spanned Belgium, Australia, and France (PAD and lung); psychiatric biomarker work drew on international trial cohorts (TD-Brain, EMBARC).",
+    "I work with clinical investigators, regulatory specialists, and ML engineers on catheter-lab studies, psychiatric trial cohorts, and cardiac imaging R&D. Recent clinical delivery spanned Belgium, Australia, and France (peripheral arterial and lung studies); psychiatric biomarker work drew on pooled international trial cohorts.",
     "Based in Paris. Career across Greece, the Netherlands, and France; comfortable with distributed teams, including remote collaboration with US partners. Conference outputs include PVI (Paris), JET OPEN (Osaka), and ATS (Orlando).",
   ],
   contactIntro:

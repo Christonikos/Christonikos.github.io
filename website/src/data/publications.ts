@@ -41,7 +41,7 @@ export const publicationDomainMeta: Record<
   "clinical-ai-biosignals": {
     title: "Clinical AI & biomedical signal validation",
     intro:
-      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance for peripheral arterial disease (PAD) and lung biopsy at Sensome, plus electroencephalography (EEG)-led psychiatric treatment-response work at Sama Therapeutics.",
+      "Clinically validated machine learning (ML) on biomedical signals: intravascular bioimpedance for peripheral arterial disease (PAD) and lung biopsy, plus multimodal psychiatric treatment-response biomarkers.",
   },
   "cognitive-neuroscience-language": {
     title: "Cognitive neuroscience & language processing",
@@ -125,7 +125,7 @@ export const publicationGroupMeta: Record<
     title:
       "Psychiatric treatment-response prediction from EEG biomarkers (Sama Therapeutics)",
     intro:
-      "Multimodal model predicting treatment response across four psychiatric conditions from electroencephalography (EEG) and trial data. Christos led the EEG pipeline.",
+      "Multimodal model predicting treatment response across four psychiatric conditions. Christos led feature extraction across EEG, ECG, and psychometric modalities.",
   },
   "neuroimaging-sentence": {
     tocLabel: "Sentence structure decoding in MEG/EEG (Cortex 2026)",
@@ -137,7 +137,7 @@ export const publicationGroupMeta: Record<
     tocLabel: "Grammatical agreement in humans and LMs (EMNLP 2023)",
     title: "Psycholinguistics and computational modelling",
     intro:
-      "Human grammatical agreement versus language models (LMs). First-author EMNLP 2023 paper (Empirical Methods in Natural Language Processing) with Meta AI and NeuroSpin co-authors.",
+      "Human grammatical agreement versus language models (LMs). First-author EMNLP 2023 paper (Singapore; Empirical Methods in Natural Language Processing) with Meta AI and NeuroSpin co-authors.",
   },
   "llm-evaluation": {
     tocLabel: "LLM personality traits and semantic violations (IJCNLP, Springer)",
@@ -236,7 +236,7 @@ export const publications: Publication[] = [
     title:
       "Transprognostic treatment-response prediction across depression, ADHD, OCD, and PTSD",
     venue: "6th Neuropsychiatric Drug Development Summit, Boston",
-    role: "Third author · EEG pipeline lead",
+    role: "Third author · multimodal feature extraction lead",
     studyPhase: "Clinical · TRIPOD Type 4 validation",
     summary:
       "MDD, ADHD, OCD, and PTSD; TRIPOD Type 4 external validation; ranked first in the TDBRAIN international competition.",
@@ -281,7 +281,8 @@ export const publications: Publication[] = [
     year: 2023,
     title:
       "Assessing the influence of attractor-verb distance on grammatical agreement in humans and language models",
-    venue: "EMNLP 2023 (Empirical Methods in Natural Language Processing)",
+    venue:
+      "EMNLP 2023, Singapore (Empirical Methods in Natural Language Processing)",
     role: "First author",
     summary:
       "RSVP agreement task (n=34): humans and NLMs err more with proximal attractors; linear RT effect of distance; GPT-Neo-1.3B and grammar-corrected T5 compared to humans.",

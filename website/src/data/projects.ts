@@ -19,36 +19,34 @@ export type WorkItem = {
 export const selectedWork: WorkItem[] = [
   {
     title: "Cardiac ultrasound AI under FDA and CE MDR",
-    context: "Head of Research · DESKi",
+    context: "Head of Research",
     summary:
       "AI/ML for cardiac ultrasound classification, segmentation, and detection with regulatory milestones aligned to FDA PCCP and CE MDR timelines.",
     tags: ["Cardiac imaging", "FDA · CE MDR", "Team lead"],
     bullets: [
       "Lead a team of three; report to CPO; coordinate AI, clinical, and regulatory functions.",
       "Build validation documentation and evidence packages as research milestones complete.",
-      "Owned HF-VCOM analysis and cross-functional AI–clinical–regulatory review cadence.",
+      "Led statistical analysis deliverables for cardiac ultrasound validation and cross-functional AI–clinical–regulatory review cadence.",
     ],
     href: "/medical-device-ai/",
     hrefLabel: "Medical device AI",
-    links: [
-      { label: "HeartFocus (DESKi)", href: "https://www.heartfocus.ai/" },
-    ],
+    links: [{ label: "HeartFocus product", href: "https://www.heartfocus.ai/" }],
   },
   {
-    title: "Bioimpedance ML for PAD and lung tissue characterisation",
-    context: "Machine Learning Lead · Sensome",
+    title:
+      "Bioimpedance ML for clinical trials: in-vivo, ex-vivo, and lung cancer",
+    context: "Machine Learning Lead",
     summary:
-      "ML pipelines for impedance-based tissue and clot characterisation across three full-cycle clinical studies.",
-    tags: ["Bioimpedance", "Clinical validation", "R² = 0.79", "Australia · France"],
+      "ML pipelines for clinical trials: in-vivo and ex-vivo peripheral arterial studies and lung cancer tissue classification across three full-cycle programmes.",
+    tags: ["Bioimpedance", "Clinical trials", "R² = 0.79", "Australia · France"],
     bullets: [
-      "PAD clot characterisation (SEPARATE / E-SEPARATE): first author; PVI 2024 and JET 2025.",
+      "Peripheral arterial clot characterisation (SEPARATE / E-SEPARATE): first author; PVI 2024 and JET 2025.",
       "Lung biopsy tissue classification (INSPECT): ML analysis lead; first-in-human study, ATS 2026.",
       "Automated ingestion-to-inference pipelines with uncertainty quantification at labelling and inference.",
     ],
     href: "/biosignals/",
     hrefLabel: "Biosignal ML",
     links: [
-      { label: "Sensome", href: "https://www.sensome.com/" },
       {
         label: "About the SEPARATE and E-SEPARATE studies (Vascular News)",
         href: "https://vascularnews.com/sensome-announces-data-from-two-studies-showing-clot-sensing-guidewire-successfully-identifies-fresh-clot-to-support-decision-making-in-pad-treatment/",
@@ -57,12 +55,12 @@ export const selectedWork: WorkItem[] = [
   },
   {
     title: "Psychiatric biomarkers at scale",
-    context: "Principal / Senior ML Engineer · Sama Therapeutics",
+    context: "Principal ML Engineer (promoted from Senior)",
     summary:
       "Transprognostic multimodal algorithm predicting treatment response across MDD, ADHD, OCD, and PTSD.",
     tags: ["EEG · ECG · GSR", "TRIPOD Type 4", "12,000+ subjects", "#1 ranked"],
     bullets: [
-      "Owned EEG pipeline; TRIPOD Type 4 external validation across four psychiatric indications.",
+      "Owned multimodal feature extraction (EEG, ECG, psychometrics) for the transprognostic model; TRIPOD Type 4 external validation across four psychiatric indications.",
       "Managed automated biosignal collection and analysis for 12,000+ subjects.",
       "Algorithm ranked #1 in an international competition; validated across 10,000+ aggregated subjects.",
     ],
@@ -73,15 +71,15 @@ export const selectedWork: WorkItem[] = [
     ],
   },
   {
-    title: "Hierarchical vs sequential sentence processing",
+    title: "Human language processing and computational language models",
     context: "PhD researcher · NeuroSpin / Sorbonne University",
     summary:
-      "First-author Cortex paper: in human MEG/EEG, only structural effects decode above chance; an LSTM model also decodes transition and congruity.",
-    tags: ["Cortex 2026", "EMNLP 2023", "MEG · EEG"],
+      "How the human brain and computational models process language: MEG/EEG decoding during sentence reading and comparison with language models.",
+    tags: ["Cortex 2026", "EMNLP 2023 · Singapore", "MEG · EEG"],
     bullets: [
       "First author, Cortex (Elsevier): humans show decodable structural effects only; transition and congruity remain at chance.",
-      "LSTM language model decodes structural, transition, and congruity effects.",
-      "First author, EMNLP 2023 (top 14% of submissions): grammatical agreement in humans and language models.",
+      "Compared human neural data with an LSTM language model that decodes structural, transition, and congruity effects.",
+      "First author, EMNLP 2023, Singapore (top 14% of submissions): grammatical agreement in humans and language models.",
       "Co-authored with Meta AI, Collège de France, and ENS researchers.",
     ],
     href: "/neuroimaging-ml/",

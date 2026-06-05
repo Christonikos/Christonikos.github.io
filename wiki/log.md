@@ -2,6 +2,25 @@
 
 ---
 
+## 2026-05-28 — Website copy: seniority, de-emphasise employer names, Sama scope, EMNLP Singapore
+
+**Trigger**: User feedback on homepage/work cards, collaboration text, and role scope.
+
+**Website** (`website/src/data/site.ts`, `projects.ts`, `publications.ts`, subpages):
+- Removed second About paragraph (employer list after PhD)
+- Hero bridge: `Senior → Principal → Head of Research` (no employer name-dropping)
+- Work cards: clinical-trial headline for bioimpedance; multimodal feature extraction at Sama; broader PhD title; abstract DESKi bullet (no HF-VCOM)
+- Sama publication role: multimodal feature extraction lead
+- EMNLP venue: Singapore
+- Collaboration: removed EMBARC name (kept in wiki/poster metrics only; source: [[source-sama-poster]])
+
+**Wiki**:
+- `wiki/publications.md` — Sama contribution + EMNLP Singapore
+- `wiki/employment-history.md` — Sama feature extraction scope (user-confirmed)
+- `wiki/source-overleaf-emnlp-interference-2023.md` — Singapore venue
+
+---
+
 ## 2026-05-28 — GitHub Pages: branch deploy only (no Actions)
 
 **Trigger**: Live site stuck on old Actions artifact; Actions blocked by billing; user policy: always deploy from branch.
