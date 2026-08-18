@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://christoszacharopoulos.com/sitemap-index.xml
